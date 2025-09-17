@@ -1,0 +1,94 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }}</title>
+
+        <link href="/assets/img/favicon.png" rel="icon">
+        <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css"
+            rel="stylesheet">
+        <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="/assets/vendor/swiper/swiper-bundle.min.css"
+            rel="stylesheet">
+        <link href="/assets/vendor/glightbox/css/glightbox.min.css"
+            rel="stylesheet">
+        <link href="/assets/css/main.css" rel="stylesheet">
+    </head>
+    <body class="{{ .BodyClass }}">
+
+        <header id="header"
+            class="header d-flex align-items-center light-background sticky-top">
+            <div
+                class="container-fluid d-flex align-items-center justify-content-between">
+                <a href="/"
+                    class="logo d-flex align-items-center me-auto me-xl-0">
+                    <h1 class="sitename">Ajay Pandey</h1>
+                </a>
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="/" class="{{ if eq .Active "home"
+                                }}active{{ end }}">Home</a></li>
+                        <li><a href="/about" class="{{ if eq .Active "about"
+                                }}active{{ end }}">About</a></li>
+                        <li><a href="/resume" class="{{ if eq .Active "resume"
+                                }}active{{ end }}">Resume</a></li>
+                        <li><a href="/services"
+                                class="{{ if eq .Active "services" }}active{{
+                                end }}">Services</a></li>
+                        <li><a href="/portfolio"
+                                class="{{ if eq .Active "portfolio" }}active{{
+                                end }}">Portfolio</a></li>
+                        <li><a href="/contact" class="{{ if eq .Active "contact"
+                                }}active{{ end }}">Contact</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+                <div class="header-social-links">
+                    <a href="#" class="twitter"><i
+                            class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="facebook"><i
+                            class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i
+                            class="bi bi-instagram"></i></a>
+                    <a href="#" class="linkedin"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            {{ template "content" . }}
+        </main>
+
+        <footer id="footer" class="footer light-background">
+            <div class="container">
+                <div class="copyright text-center">
+                    <p>© <span>Copyright</span> <strong
+                            class="px-1 sitename">Ajay Pandey</strong> <span>All
+                            Rights Reserved</span></p>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/vendor/aos/aos.js"></script>
+        <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="/assets/js/main.js"></script>
+
+    </body>
+</html>
+{{ end }}

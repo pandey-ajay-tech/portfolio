@@ -1,0 +1,165 @@
+{{ define "content" }}
+
+<section id="portfolio-details" class="portfolio-details section">
+
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio Details</h2>
+        <p>Details of some key projects I have worked on.</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        {{/* Delhi University WordPress Project */}}
+        {{ if or (eq .Project "du") (eq .Project "") }}
+        <div id="du" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/du.webp" class="img-fluid"
+                    alt="Delhi University Website">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Delhi University Website</h3>
+                    <ul>
+                        <li><strong>Category</strong>: WordPress /
+                            E-Governance</li>
+                        <li><strong>Client</strong>: Delhi University</li>
+                        <li><strong>Tech</strong>: WordPress, Elementor, Custom
+                            Theme</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Developed a responsive e-governance website using
+                        WordPress & Elementor. Customized themes, optimized
+                        CSS/JS, and implemented lazy loading for faster
+                        performance.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{/* HRMS Project */}}
+        {{ if eq .Project "hrms" }}
+        <div id="hrms" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/hrms.jpg" class="img-fluid"
+                    alt="HRMS Application">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>HR Management System</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Application</li>
+                        <li><strong>Client</strong>: Hidden Brains InfoTech</li>
+                        <li><strong>Tech</strong>: CodeIgniter, MySQL</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Built HRMS with modules for employee management,
+                        attendance tracking, department hierarchy, and automated
+                        payslip PDF generation.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{/* Event Management Project */}}
+        {{ if eq .Project "event" }}
+        <div id="event" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/evs.webp" class="img-fluid"
+                    alt="Event Management System">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Event Management System</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Application</li>
+                        <li><strong>Tech</strong>: Laravel, FullCalendar, Google
+                            Calendar API</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Developed event tracking system with calendar scheduling
+                        and Google Calendar integration for seamless event
+                        management.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{/* CMS Project */}}
+        {{ if eq .Project "cms" }}
+        <div id="cms" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/cms.webp" class="img-fluid"
+                    alt="CMS Application">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Custom CMS</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Web</li>
+                        <li><strong>Tech</strong>: Laravel, MySQL, DOMPDF</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Designed and developed a scalable CMS using Laravel with
+                        optimized database, cross-browser testing, and PDF
+                        generation for reports.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{/* Tour & Travel Project */}}
+        {{ if eq .Project "travel" }}
+        <div id="travel" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/tour.jpeg" class="img-fluid"
+                    alt="Tour & Travel Booking">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Tour & Travel Booking</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Application</li>
+                        <li><strong>Tech</strong>: Laravel, DateRangePicker</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Developed a booking system for rooms & villas with
+                        role-based calendars, auto-reservation cancellation, and
+                        maintenance fee scheduler.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+        {{/* Movie Ticket Booking Project */}}
+        {{ if eq .Project "movie" }}
+        <div id="movie" class="row gy-4 mb-5">
+            <div class="col-lg-8">
+                <img src="/static/img/booking.jpeg" class="img-fluid"
+                    alt="Movie Ticket Booking">
+            </div>
+            <div class="col-lg-4">
+                <div class="portfolio-info">
+                    <h3>Movie Ticket Booking</h3>
+                    <ul>
+                        <li><strong>Category</strong>: Application</li>
+                        <li><strong>Tech</strong>: CodeIgniter, MySQL</li>
+                    </ul>
+                </div>
+                <div class="portfolio-description">
+                    <p>Implemented a seat reservation system with role-based
+                        access and secure booking workflows using CodeIgniter
+                        framework.</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+
+    </div>
+</section>
+
+{{ end }}
